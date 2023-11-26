@@ -13,7 +13,7 @@
 3.2 Changed the variable name and called generateSnakeAndLadderPostion when drawing
 3.3 Draw a snake
 3.4 The number of snakes and ladders was reduced, ladders were drawn, and the output grid number was also 1 and started to correspond.
-3.5 Comments translated into English
+3.5 Comments translated into English, avoided starting the ladder at 1
 """
 
 
