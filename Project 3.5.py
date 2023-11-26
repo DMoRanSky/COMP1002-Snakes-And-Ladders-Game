@@ -4,7 +4,7 @@
 3.2 改了变量名，在 draw 的时候调用 generateSnakeAndLadderPostion
 3.3 画了蛇
 3.4 降低了蛇和梯子的数量，画了梯子，把输出的格子编号也是 1开始对应了一下
-3.5 注释翻译了一遍成英文
+3.5 注释翻译了一遍成英文，避免了梯子起点是 1
 """
 
 """
@@ -128,7 +128,7 @@ def generateSnakeAndLadderPostion():
 		while 1:
 			num = numCell[level]
 			c = [random.randint(0, num - 1), random.randint(0, num - 1)]
-			if c[0] == c[1] or c[0] > c[1] or c[0] in Set or c[1] in Set:
+			if c[0] == c[1] or c[0] > c[1] or c[0] in Set or c[1] in Set or c[0] == 0:
 				continue
 			ladders.append(c)
 			Set[c[0]] = 1
@@ -155,6 +155,13 @@ def draw_board(canvas, size):
 
 	canvas: 画布对象
 	size: 棋盘大小
+	"""
+
+	"""
+	Draw a checkerboard pattern
+
+	canvas: canvas object
+	size: chessboard size
 	"""
 	num_cells = size * size
 	rect_coords = [0]*(num_cells)
