@@ -378,7 +378,7 @@ def draw_snakes(canvas):
 		randomint = random.randint(0,proportionaterange)*side*-1
 		item[2] = [midpoint2[0]+randomint/r,midpoint2[1]+randomint*slope/r]
 		snakes_sizes.append(proportionaterange)
-		templinelist = []
+	templinelist = []
 	counter = 0
 	for item in snakes_coords: #A biezer curve is generated based on the randomly generated points and the point where the snake starts and ends. A snake is drawn on that biezer curve.
 		templinelist.append([])
